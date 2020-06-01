@@ -18,9 +18,12 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Hello, world!</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#navbar" data-offset="57">
     <!-- Header -->
-    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav
+      id="header"
+      class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top"
+    >
       <div class="container">
         <a class="navbar-brand" href="#"
           ><img src="./assets/images/platzi-logo.png" alt="logo" />Conf
@@ -38,24 +41,33 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbar">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"
+            <li class="nav-item">
+              <a class="nav-link" href="#hero"
                 >La conferencia <span class="sr-only">(current)</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Los oradores</a>
+              <a class="nav-link" href="#speakers">Los oradores</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">El lugar y la fecha</a>
+              <a class="nav-link" href="#conviertete-en-orador"
+                >Conviertete en orador</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Conviertete en orador</a>
+              <a class="nav-link" href="#place-time">El lugar y la fecha</a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link text-platzi" href="#">Comprar tickets</a>
+              <a
+                class="nav-link text-platzi"
+                href="#"
+                data-toggle="modal"
+                data-target="#modalCompra"
+                >Comprar tickets</a
+              >
             </li>
           </ul>
         </div>
@@ -115,8 +127,16 @@
                     estudiantes de Platzi y a los oradores de primer nivel que
                     tenemos para ti. Te esperamos!
                   </p>
-                  <a href="#">Quiero ser orador</a>
-                  <button>Comprar tickets</button>
+                  <a href="#" class="btn btn-outline-light"
+                    >Quiero ser orador</a
+                  >
+                  <button
+                    class="btn btn-platzi"
+                    data-toggle="modal"
+                    data-target="#modalCompra"
+                  >
+                    Comprar tickets
+                  </button>
                 </div>
               </div>
             </div>
@@ -125,6 +145,188 @@
       </div>
     </section>
     <!-- /Hero -->
+
+    <!-- Speakers -->
+    <section id="speakers" class="mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center text-uppercase">
+            <small>Conoce a los</small>
+            <h2>Oradores</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <img
+                src="./assets/speakers/sacha.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title mb-0">Sacha Lifszyc</h5>
+                <div class="badges mb-2">
+                  <span class="badge badge-warning">JavaScript</span>
+                  <span class="badge badge-info">React</span>
+                </div>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <img
+                src="./assets/speakers/leonidas2.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title mb-0">Sacha Lifszyc</h5>
+                <div class="badges mb-2">
+                  <span class="badge badge-warning">JavaScript</span>
+                  <span class="badge badge-info">React</span>
+                </div>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <img
+                src="./assets/speakers/freddy.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <div class="badges mb-2">
+                  <span class="badge badge-warning">JavaScript</span>
+                  <span class="badge badge-info">React</span>
+                </div>
+                <h5 class="card-title mb-0">Sacha Lifszyc</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <img
+                src="./assets/speakers/cvander.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title mb-0">Sacha Lifszyc</h5>
+                <div class="badges mb-2">
+                  <span class="badge badge-warning">JavaScript</span>
+                  <span class="badge badge-info">React</span>
+                </div>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Speaker -->
+
+    <!-- Lugar y fecha -->
+    <section id="place-time">
+      <div class="container-fluid">
+        <div class="row text-lg-left text-md-center align-items-center">
+          <div class="col-lg-6 col-md-12 pl-0 pr-0">
+            <img src="./assets/images/honolulu.jpg" alt="honolulu" />
+          </div>
+          <div class="col-lg-6 col-md-12 pt-2 pb-4">
+            <h2>Honolulu - Octubre 2025</h2>
+            <p>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content. Some quick example text to build on
+              the card title and make up the bulk of the card's content.
+            </p>
+            <a class="btn btn-outline-light" href="#">Conoce más</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Lugar y fecha -->
+    <!-- Conviertete en orador -->
+    <section id="conviertete-en-orador" class="pt-2 pb-2">
+      <div class="container">
+        <div class="row">
+          <div class="col text-uppercase text-center">
+            <small>Conviertete en un </small>
+            <h2>Orador</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            Anótate como orador para dar una
+            <abbr data-toggle="tooltip" title="Charla de 5 minutos"
+              >charla ignite</abbr
+            >
+            . Cuéntanos de qué quieres hablar
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-12 col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Nombre"
+                  />
+                </div>
+                <div class="form-group col-12 col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Apellido"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col">
+                  <textarea
+                    name="text"
+                    class="form-control form-control-lg"
+                    placeholder="Sobre que quieres hablar"
+                  ></textarea>
+                  <small class="form-text text-muted"
+                    >Recuerda incluir un título para tu charla</small
+                  >
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-12">
+                  <abbr
+                    data-toggle="tooltip"
+                    title="Al dar click se guardara tu información"
+                    ><button class="btn btn-platzi btn-block">
+                      Enviar
+                    </button></abbr
+                  >
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Conviertete en orador -->
 
     <!-- Footer -->
     <footer id="footer" class="pb-4 pt-4">
@@ -148,6 +350,65 @@
     </footer>
     <!-- Cierra el footer -->
 
+    <!-- modal -->
+    <div
+      class="modal fade"
+      id="modalCompra"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">
+              Comprar tickets
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="form-row">
+              <div class="form-group col">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">
+                      @
+                    </span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Username"
+                    />
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="alert alert-warning" role="alert">
+              Recibiras un correo de información si sales sorteado
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button type="button" class="btn btn-platzi">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -165,5 +426,6 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
